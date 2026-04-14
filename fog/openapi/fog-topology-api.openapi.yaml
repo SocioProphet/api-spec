@@ -1,0 +1,23 @@
+openapi: 3.1.0
+info:
+  title: Fog Topology API
+  version: 0.3.0
+paths:
+  /sites:
+    get:
+      summary: List sites
+      responses:
+        '200':
+          description: OK
+  /nodes:
+    get:
+      summary: List nodes
+      responses:
+        '200':
+          description: OK
+  /graph/query:
+    post:
+      summary: Query fog graph
+      responses:
+        '200':
+          description: OK
