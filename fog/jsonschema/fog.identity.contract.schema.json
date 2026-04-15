@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://socioprophet.com/schemas/fog.identity.contract.schema.json",
+  "title": "FogIdentityContract",
+  "type": "object",
+  "required": [
+    "principal_id",
+    "principal_kind",
+    "status"
+  ],
+  "properties": {
+    "principal_id": {"type": "string"},
+    "principal_kind": {
+      "enum": ["human", "org", "service", "agent", "station", "external_peer"]
+    },
+    "owner_id": {"type": "string"},
+    "jurisdiction": {"type": "string"},
+    "trust_zone": {"type": "string"},
+    "status": {
+      "enum": ["active", "suspended", "revoked", "retired"]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "attestation_required": {"type": "boolean"},
+    "revocation_ref": {"type": "string"}
+  }
+}

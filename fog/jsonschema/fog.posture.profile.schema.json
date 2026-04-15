@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://socioprophet.com/schemas/fog.posture.profile.schema.json",
+  "title": "FogPostureProfile",
+  "type": "object",
+  "required": [
+    "profile_id",
+    "state",
+    "allowed_channels"
+  ],
+  "properties": {
+    "profile_id": {"type": "string"},
+    "state": {
+      "enum": ["local_operational", "fleet_managed", "federated", "quarantine", "break_glass"]
+    },
+    "allowed_channels": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "policy_engine": {"type": "string"},
+    "local_override": {"type": "boolean"},
+    "attestation_required": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://socioprophet.com/schemas/fog.deployment.profile.schema.json",
+  "title": "FogDeploymentProfile",
+  "type": "object",
+  "required": [
+    "profile_id",
+    "mode",
+    "posture_state",
+    "site_topology",
+    "enabled_subsystems"
+  ],
+  "properties": {
+    "profile_id": {"type": "string"},
+    "mode": {
+      "enum": ["single-home", "multi-home", "regional-multimesh"]
+    },
+    "posture_state": {
+      "enum": ["local_operational", "fleet_managed", "federated", "quarantine", "break_glass"]
+    },
+    "site_topology": {"type": "object"},
+    "enabled_subsystems": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "local_only_data_classes": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "exportable_data_classes": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "requires_attestation": {"type": "boolean"},
+    "dashboard_surfaces": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

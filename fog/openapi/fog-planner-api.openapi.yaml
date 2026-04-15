@@ -1,0 +1,23 @@
+openapi: 3.1.0
+info:
+  title: Fog Planner API
+  version: 0.3.0
+paths:
+  /plans/what-if:
+    post:
+      summary: Run placement simulation
+      responses:
+        '200':
+          description: OK
+  /plans/blast-radius:
+    post:
+      summary: Simulate blast radius
+      responses:
+        '200':
+          description: OK
+  /plans/rollout:
+    post:
+      summary: Simulate rollout
+      responses:
+        '200':
+          description: OK

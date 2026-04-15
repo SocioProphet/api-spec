@@ -1,0 +1,34 @@
+{
+  "profile_id": "single-home-demo",
+  "mode": "single-home",
+  "posture_state": "local_operational",
+  "site_topology": {
+    "sites": [
+      {
+        "site_id": "site-alpha",
+        "trust_zone": "local"
+      }
+    ]
+  },
+  "enabled_subsystems": [
+    "dashboard-bff",
+    "topology-api",
+    "telemetry-normalizer"
+  ],
+  "local_only_data_classes": [
+    "rf_raw",
+    "camera_sensitive"
+  ],
+  "exportable_data_classes": [
+    "aggregated_metrics",
+    "artifact_manifests"
+  ],
+  "requires_attestation": true,
+  "dashboard_surfaces": [
+    "overview",
+    "map",
+    "topology",
+    "security",
+    "artifacts"
+  ]
+}
